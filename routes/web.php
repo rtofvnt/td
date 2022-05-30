@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TasksController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('tasks');
-});
+Route::get('/',                 [TasksController::class,'index'])->name('tasks.index');
+
+Route::post('/add_new_task',    [TasksController::class, 'add_new_task'])->name('tasks.add_new');
+Route::post('/edit_task',       [TasksController::class, 'edit_task'])->name('tasks.edit');

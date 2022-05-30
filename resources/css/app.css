@@ -1,0 +1,16 @@
+body {
+    background-color: #eee;
+}
+
+th {
+    border-top: none!important; 
+}
+
+.task-column {
+    width: 58rem;
+}
+
+.logo {
+    padding: 2rem 0 4rem;
+    
+}
